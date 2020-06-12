@@ -1,0 +1,26 @@
+@using SignalRDemo.Models
+@model Article
+@{
+     ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<div class="container">
+<form asp-action="Index" asp-controller="Admin" method="POST">
+    <div class="form-group">
+        <label>Heading</label>
+        <input type="text" class="form-control" asp-for="articleHeading">
+    </div>
+    <div class="form-group">
+        <label>Content</label>
+        <input type="text" class="form-control" asp-for="articleContent">
+    </div>
+    <div class="form-group">
+        <label>UserId</label>
+        <input type="text" class="form-control" asp-for="userId">
+    </div>
+    <input type="submit" value="Send" class="btn btn-ouline-default">
+</form>
+</div>
